@@ -1,0 +1,1696 @@
+Created by PLY (http://www.dabeaz.com/ply)
+
+Grammar
+
+Rule 0     S' -> expression
+Rule 1     expression -> expression MUL expression
+Rule 2     expression -> expression DIV expression
+Rule 3     expression -> expression ADD expression
+Rule 4     expression -> expression SUB expression
+Rule 5     expression -> expression OR expression
+Rule 6     expression -> expression AND expression
+Rule 7     expression -> expression BOR expression
+Rule 8     expression -> expression BAND expression
+Rule 9     expression -> expression EQ expression
+Rule 10    expression -> expression NE expression
+Rule 11    expression -> expression LT expression
+Rule 12    expression -> expression GT expression
+Rule 13    expression -> NOT expression
+Rule 14    expression -> BNOT expression
+Rule 15    expression -> LPAREN expression RPAREN
+Rule 16    expression -> ID
+Rule 17    expression -> intnumber
+Rule 18    intnumber -> INTNUM_BIN
+Rule 19    intnumber -> INTNUM_OCT
+Rule 20    intnumber -> INTNUM_DEC
+Rule 21    intnumber -> INTNUM_HEX
+Rule 22    intnumber -> SIGNED_INTNUM_BIN
+Rule 23    intnumber -> SIGNED_INTNUM_OCT
+Rule 24    intnumber -> SIGNED_INTNUM_DEC
+Rule 25    intnumber -> SIGNED_INTNUM_HEX
+
+Terminals, with rules where they appear
+
+ADD                  : 3
+AND                  : 6
+BAND                 : 8
+BNOT                 : 14
+BOR                  : 7
+DIV                  : 2
+EQ                   : 9
+GT                   : 12
+ID                   : 16
+INTNUM_BIN           : 18
+INTNUM_DEC           : 20
+INTNUM_HEX           : 21
+INTNUM_OCT           : 19
+LPAREN               : 15
+LT                   : 11
+MUL                  : 1
+NE                   : 10
+NOT                  : 13
+OR                   : 5
+RPAREN               : 15
+SIGNED_INTNUM_BIN    : 22
+SIGNED_INTNUM_DEC    : 24
+SIGNED_INTNUM_HEX    : 25
+SIGNED_INTNUM_OCT    : 23
+SUB                  : 4
+error                : 
+
+Nonterminals, with rules where they appear
+
+expression           : 1 1 2 2 3 3 4 4 5 5 6 6 7 7 8 8 9 9 10 10 11 11 12 12 13 14 15 0
+intnumber            : 17
+
+
+state 0
+
+    (0) S' -> . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 1
+    intnumber                      shift and go to state 6
+
+state 1
+
+    (0) S' -> expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    OR              shift and go to state 19
+    AND             shift and go to state 20
+    BOR             shift and go to state 21
+    BAND            shift and go to state 22
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+
+state 2
+
+    (13) expression -> NOT . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 27
+    intnumber                      shift and go to state 6
+
+state 3
+
+    (14) expression -> BNOT . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 28
+    intnumber                      shift and go to state 6
+
+state 4
+
+    (15) expression -> LPAREN . expression RPAREN
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 29
+    intnumber                      shift and go to state 6
+
+state 5
+
+    (16) expression -> ID .
+
+    MUL             reduce using rule 16 (expression -> ID .)
+    DIV             reduce using rule 16 (expression -> ID .)
+    ADD             reduce using rule 16 (expression -> ID .)
+    SUB             reduce using rule 16 (expression -> ID .)
+    OR              reduce using rule 16 (expression -> ID .)
+    AND             reduce using rule 16 (expression -> ID .)
+    BOR             reduce using rule 16 (expression -> ID .)
+    BAND            reduce using rule 16 (expression -> ID .)
+    EQ              reduce using rule 16 (expression -> ID .)
+    NE              reduce using rule 16 (expression -> ID .)
+    LT              reduce using rule 16 (expression -> ID .)
+    GT              reduce using rule 16 (expression -> ID .)
+    $end            reduce using rule 16 (expression -> ID .)
+    RPAREN          reduce using rule 16 (expression -> ID .)
+
+
+state 6
+
+    (17) expression -> intnumber .
+
+    MUL             reduce using rule 17 (expression -> intnumber .)
+    DIV             reduce using rule 17 (expression -> intnumber .)
+    ADD             reduce using rule 17 (expression -> intnumber .)
+    SUB             reduce using rule 17 (expression -> intnumber .)
+    OR              reduce using rule 17 (expression -> intnumber .)
+    AND             reduce using rule 17 (expression -> intnumber .)
+    BOR             reduce using rule 17 (expression -> intnumber .)
+    BAND            reduce using rule 17 (expression -> intnumber .)
+    EQ              reduce using rule 17 (expression -> intnumber .)
+    NE              reduce using rule 17 (expression -> intnumber .)
+    LT              reduce using rule 17 (expression -> intnumber .)
+    GT              reduce using rule 17 (expression -> intnumber .)
+    $end            reduce using rule 17 (expression -> intnumber .)
+    RPAREN          reduce using rule 17 (expression -> intnumber .)
+
+
+state 7
+
+    (18) intnumber -> INTNUM_BIN .
+
+    MUL             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    DIV             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    ADD             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    SUB             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    OR              reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    AND             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    BOR             reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    BAND            reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    EQ              reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    NE              reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    LT              reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    GT              reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    $end            reduce using rule 18 (intnumber -> INTNUM_BIN .)
+    RPAREN          reduce using rule 18 (intnumber -> INTNUM_BIN .)
+
+
+state 8
+
+    (19) intnumber -> INTNUM_OCT .
+
+    MUL             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    DIV             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    ADD             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    SUB             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    OR              reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    AND             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    BOR             reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    BAND            reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    EQ              reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    NE              reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    LT              reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    GT              reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    $end            reduce using rule 19 (intnumber -> INTNUM_OCT .)
+    RPAREN          reduce using rule 19 (intnumber -> INTNUM_OCT .)
+
+
+state 9
+
+    (20) intnumber -> INTNUM_DEC .
+
+    MUL             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    DIV             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    ADD             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    SUB             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    OR              reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    AND             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    BOR             reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    BAND            reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    EQ              reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    NE              reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    LT              reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    GT              reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    $end            reduce using rule 20 (intnumber -> INTNUM_DEC .)
+    RPAREN          reduce using rule 20 (intnumber -> INTNUM_DEC .)
+
+
+state 10
+
+    (21) intnumber -> INTNUM_HEX .
+
+    MUL             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    DIV             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    ADD             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    SUB             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    OR              reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    AND             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    BOR             reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    BAND            reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    EQ              reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    NE              reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    LT              reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    GT              reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    $end            reduce using rule 21 (intnumber -> INTNUM_HEX .)
+    RPAREN          reduce using rule 21 (intnumber -> INTNUM_HEX .)
+
+
+state 11
+
+    (22) intnumber -> SIGNED_INTNUM_BIN .
+
+    MUL             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    DIV             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    ADD             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    SUB             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    OR              reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    AND             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    BOR             reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    BAND            reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    EQ              reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    NE              reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    LT              reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    GT              reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    $end            reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+    RPAREN          reduce using rule 22 (intnumber -> SIGNED_INTNUM_BIN .)
+
+
+state 12
+
+    (23) intnumber -> SIGNED_INTNUM_OCT .
+
+    MUL             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    DIV             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    ADD             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    SUB             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    OR              reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    AND             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    BOR             reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    BAND            reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    EQ              reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    NE              reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    LT              reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    GT              reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    $end            reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+    RPAREN          reduce using rule 23 (intnumber -> SIGNED_INTNUM_OCT .)
+
+
+state 13
+
+    (24) intnumber -> SIGNED_INTNUM_DEC .
+
+    MUL             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    DIV             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    ADD             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    SUB             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    OR              reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    AND             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    BOR             reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    BAND            reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    EQ              reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    NE              reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    LT              reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    GT              reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    $end            reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+    RPAREN          reduce using rule 24 (intnumber -> SIGNED_INTNUM_DEC .)
+
+
+state 14
+
+    (25) intnumber -> SIGNED_INTNUM_HEX .
+
+    MUL             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    DIV             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    ADD             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    SUB             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    OR              reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    AND             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    BOR             reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    BAND            reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    EQ              reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    NE              reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    LT              reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    GT              reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    $end            reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+    RPAREN          reduce using rule 25 (intnumber -> SIGNED_INTNUM_HEX .)
+
+
+state 15
+
+    (1) expression -> expression MUL . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 30
+    intnumber                      shift and go to state 6
+
+state 16
+
+    (2) expression -> expression DIV . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 31
+    intnumber                      shift and go to state 6
+
+state 17
+
+    (3) expression -> expression ADD . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 32
+    intnumber                      shift and go to state 6
+
+state 18
+
+    (4) expression -> expression SUB . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 33
+    intnumber                      shift and go to state 6
+
+state 19
+
+    (5) expression -> expression OR . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 34
+    intnumber                      shift and go to state 6
+
+state 20
+
+    (6) expression -> expression AND . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 35
+    intnumber                      shift and go to state 6
+
+state 21
+
+    (7) expression -> expression BOR . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 36
+    intnumber                      shift and go to state 6
+
+state 22
+
+    (8) expression -> expression BAND . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 37
+    intnumber                      shift and go to state 6
+
+state 23
+
+    (9) expression -> expression EQ . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 38
+    intnumber                      shift and go to state 6
+
+state 24
+
+    (10) expression -> expression NE . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 39
+    intnumber                      shift and go to state 6
+
+state 25
+
+    (11) expression -> expression LT . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 40
+    intnumber                      shift and go to state 6
+
+state 26
+
+    (12) expression -> expression GT . expression
+    (1) expression -> . expression MUL expression
+    (2) expression -> . expression DIV expression
+    (3) expression -> . expression ADD expression
+    (4) expression -> . expression SUB expression
+    (5) expression -> . expression OR expression
+    (6) expression -> . expression AND expression
+    (7) expression -> . expression BOR expression
+    (8) expression -> . expression BAND expression
+    (9) expression -> . expression EQ expression
+    (10) expression -> . expression NE expression
+    (11) expression -> . expression LT expression
+    (12) expression -> . expression GT expression
+    (13) expression -> . NOT expression
+    (14) expression -> . BNOT expression
+    (15) expression -> . LPAREN expression RPAREN
+    (16) expression -> . ID
+    (17) expression -> . intnumber
+    (18) intnumber -> . INTNUM_BIN
+    (19) intnumber -> . INTNUM_OCT
+    (20) intnumber -> . INTNUM_DEC
+    (21) intnumber -> . INTNUM_HEX
+    (22) intnumber -> . SIGNED_INTNUM_BIN
+    (23) intnumber -> . SIGNED_INTNUM_OCT
+    (24) intnumber -> . SIGNED_INTNUM_DEC
+    (25) intnumber -> . SIGNED_INTNUM_HEX
+
+    NOT             shift and go to state 2
+    BNOT            shift and go to state 3
+    LPAREN          shift and go to state 4
+    ID              shift and go to state 5
+    INTNUM_BIN      shift and go to state 7
+    INTNUM_OCT      shift and go to state 8
+    INTNUM_DEC      shift and go to state 9
+    INTNUM_HEX      shift and go to state 10
+    SIGNED_INTNUM_BIN shift and go to state 11
+    SIGNED_INTNUM_OCT shift and go to state 12
+    SIGNED_INTNUM_DEC shift and go to state 13
+    SIGNED_INTNUM_HEX shift and go to state 14
+
+    expression                     shift and go to state 41
+    intnumber                      shift and go to state 6
+
+state 27
+
+    (13) expression -> NOT expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    MUL             reduce using rule 13 (expression -> NOT expression .)
+    DIV             reduce using rule 13 (expression -> NOT expression .)
+    ADD             reduce using rule 13 (expression -> NOT expression .)
+    SUB             reduce using rule 13 (expression -> NOT expression .)
+    OR              reduce using rule 13 (expression -> NOT expression .)
+    AND             reduce using rule 13 (expression -> NOT expression .)
+    BOR             reduce using rule 13 (expression -> NOT expression .)
+    BAND            reduce using rule 13 (expression -> NOT expression .)
+    EQ              reduce using rule 13 (expression -> NOT expression .)
+    NE              reduce using rule 13 (expression -> NOT expression .)
+    LT              reduce using rule 13 (expression -> NOT expression .)
+    GT              reduce using rule 13 (expression -> NOT expression .)
+    $end            reduce using rule 13 (expression -> NOT expression .)
+    RPAREN          reduce using rule 13 (expression -> NOT expression .)
+
+  ! MUL             [ shift and go to state 15 ]
+  ! DIV             [ shift and go to state 16 ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 28
+
+    (14) expression -> BNOT expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    MUL             reduce using rule 14 (expression -> BNOT expression .)
+    DIV             reduce using rule 14 (expression -> BNOT expression .)
+    ADD             reduce using rule 14 (expression -> BNOT expression .)
+    SUB             reduce using rule 14 (expression -> BNOT expression .)
+    OR              reduce using rule 14 (expression -> BNOT expression .)
+    AND             reduce using rule 14 (expression -> BNOT expression .)
+    BOR             reduce using rule 14 (expression -> BNOT expression .)
+    BAND            reduce using rule 14 (expression -> BNOT expression .)
+    EQ              reduce using rule 14 (expression -> BNOT expression .)
+    NE              reduce using rule 14 (expression -> BNOT expression .)
+    LT              reduce using rule 14 (expression -> BNOT expression .)
+    GT              reduce using rule 14 (expression -> BNOT expression .)
+    $end            reduce using rule 14 (expression -> BNOT expression .)
+    RPAREN          reduce using rule 14 (expression -> BNOT expression .)
+
+  ! MUL             [ shift and go to state 15 ]
+  ! DIV             [ shift and go to state 16 ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 29
+
+    (15) expression -> LPAREN expression . RPAREN
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    RPAREN          shift and go to state 42
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    OR              shift and go to state 19
+    AND             shift and go to state 20
+    BOR             shift and go to state 21
+    BAND            shift and go to state 22
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+
+state 30
+
+    (1) expression -> expression MUL expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    MUL             reduce using rule 1 (expression -> expression MUL expression .)
+    DIV             reduce using rule 1 (expression -> expression MUL expression .)
+    ADD             reduce using rule 1 (expression -> expression MUL expression .)
+    SUB             reduce using rule 1 (expression -> expression MUL expression .)
+    OR              reduce using rule 1 (expression -> expression MUL expression .)
+    AND             reduce using rule 1 (expression -> expression MUL expression .)
+    BOR             reduce using rule 1 (expression -> expression MUL expression .)
+    BAND            reduce using rule 1 (expression -> expression MUL expression .)
+    EQ              reduce using rule 1 (expression -> expression MUL expression .)
+    NE              reduce using rule 1 (expression -> expression MUL expression .)
+    LT              reduce using rule 1 (expression -> expression MUL expression .)
+    GT              reduce using rule 1 (expression -> expression MUL expression .)
+    $end            reduce using rule 1 (expression -> expression MUL expression .)
+    RPAREN          reduce using rule 1 (expression -> expression MUL expression .)
+
+  ! MUL             [ shift and go to state 15 ]
+  ! DIV             [ shift and go to state 16 ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 31
+
+    (2) expression -> expression DIV expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    MUL             reduce using rule 2 (expression -> expression DIV expression .)
+    DIV             reduce using rule 2 (expression -> expression DIV expression .)
+    ADD             reduce using rule 2 (expression -> expression DIV expression .)
+    SUB             reduce using rule 2 (expression -> expression DIV expression .)
+    OR              reduce using rule 2 (expression -> expression DIV expression .)
+    AND             reduce using rule 2 (expression -> expression DIV expression .)
+    BOR             reduce using rule 2 (expression -> expression DIV expression .)
+    BAND            reduce using rule 2 (expression -> expression DIV expression .)
+    EQ              reduce using rule 2 (expression -> expression DIV expression .)
+    NE              reduce using rule 2 (expression -> expression DIV expression .)
+    LT              reduce using rule 2 (expression -> expression DIV expression .)
+    GT              reduce using rule 2 (expression -> expression DIV expression .)
+    $end            reduce using rule 2 (expression -> expression DIV expression .)
+    RPAREN          reduce using rule 2 (expression -> expression DIV expression .)
+
+  ! MUL             [ shift and go to state 15 ]
+  ! DIV             [ shift and go to state 16 ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 32
+
+    (3) expression -> expression ADD expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    ADD             reduce using rule 3 (expression -> expression ADD expression .)
+    SUB             reduce using rule 3 (expression -> expression ADD expression .)
+    OR              reduce using rule 3 (expression -> expression ADD expression .)
+    AND             reduce using rule 3 (expression -> expression ADD expression .)
+    BOR             reduce using rule 3 (expression -> expression ADD expression .)
+    BAND            reduce using rule 3 (expression -> expression ADD expression .)
+    EQ              reduce using rule 3 (expression -> expression ADD expression .)
+    NE              reduce using rule 3 (expression -> expression ADD expression .)
+    LT              reduce using rule 3 (expression -> expression ADD expression .)
+    GT              reduce using rule 3 (expression -> expression ADD expression .)
+    $end            reduce using rule 3 (expression -> expression ADD expression .)
+    RPAREN          reduce using rule 3 (expression -> expression ADD expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+
+  ! MUL             [ reduce using rule 3 (expression -> expression ADD expression .) ]
+  ! DIV             [ reduce using rule 3 (expression -> expression ADD expression .) ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 33
+
+    (4) expression -> expression SUB expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    ADD             reduce using rule 4 (expression -> expression SUB expression .)
+    SUB             reduce using rule 4 (expression -> expression SUB expression .)
+    OR              reduce using rule 4 (expression -> expression SUB expression .)
+    AND             reduce using rule 4 (expression -> expression SUB expression .)
+    BOR             reduce using rule 4 (expression -> expression SUB expression .)
+    BAND            reduce using rule 4 (expression -> expression SUB expression .)
+    EQ              reduce using rule 4 (expression -> expression SUB expression .)
+    NE              reduce using rule 4 (expression -> expression SUB expression .)
+    LT              reduce using rule 4 (expression -> expression SUB expression .)
+    GT              reduce using rule 4 (expression -> expression SUB expression .)
+    $end            reduce using rule 4 (expression -> expression SUB expression .)
+    RPAREN          reduce using rule 4 (expression -> expression SUB expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+
+  ! MUL             [ reduce using rule 4 (expression -> expression SUB expression .) ]
+  ! DIV             [ reduce using rule 4 (expression -> expression SUB expression .) ]
+  ! ADD             [ shift and go to state 17 ]
+  ! SUB             [ shift and go to state 18 ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 34
+
+    (5) expression -> expression OR expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 5 (expression -> expression OR expression .)
+    $end            reduce using rule 5 (expression -> expression OR expression .)
+    RPAREN          reduce using rule 5 (expression -> expression OR expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    AND             shift and go to state 20
+    BOR             shift and go to state 21
+    BAND            shift and go to state 22
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! DIV             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! ADD             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! SUB             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! AND             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! BOR             [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! BAND            [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! EQ              [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! NE              [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! LT              [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! GT              [ reduce using rule 5 (expression -> expression OR expression .) ]
+  ! OR              [ shift and go to state 19 ]
+
+
+state 35
+
+    (6) expression -> expression AND expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 6 (expression -> expression AND expression .)
+    AND             reduce using rule 6 (expression -> expression AND expression .)
+    $end            reduce using rule 6 (expression -> expression AND expression .)
+    RPAREN          reduce using rule 6 (expression -> expression AND expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    BOR             shift and go to state 21
+    BAND            shift and go to state 22
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! DIV             [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! ADD             [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! SUB             [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! BOR             [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! BAND            [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! EQ              [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! NE              [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! LT              [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! GT              [ reduce using rule 6 (expression -> expression AND expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+
+
+state 36
+
+    (7) expression -> expression BOR expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 7 (expression -> expression BOR expression .)
+    AND             reduce using rule 7 (expression -> expression BOR expression .)
+    BOR             reduce using rule 7 (expression -> expression BOR expression .)
+    $end            reduce using rule 7 (expression -> expression BOR expression .)
+    RPAREN          reduce using rule 7 (expression -> expression BOR expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    BAND            shift and go to state 22
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! DIV             [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! ADD             [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! SUB             [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! BAND            [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! EQ              [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! NE              [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! LT              [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! GT              [ reduce using rule 7 (expression -> expression BOR expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+
+
+state 37
+
+    (8) expression -> expression BAND expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 8 (expression -> expression BAND expression .)
+    AND             reduce using rule 8 (expression -> expression BAND expression .)
+    BOR             reduce using rule 8 (expression -> expression BAND expression .)
+    BAND            reduce using rule 8 (expression -> expression BAND expression .)
+    $end            reduce using rule 8 (expression -> expression BAND expression .)
+    RPAREN          reduce using rule 8 (expression -> expression BAND expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    EQ              shift and go to state 23
+    NE              shift and go to state 24
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! DIV             [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! ADD             [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! SUB             [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! EQ              [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! NE              [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! LT              [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! GT              [ reduce using rule 8 (expression -> expression BAND expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+
+
+state 38
+
+    (9) expression -> expression EQ expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 9 (expression -> expression EQ expression .)
+    AND             reduce using rule 9 (expression -> expression EQ expression .)
+    BOR             reduce using rule 9 (expression -> expression EQ expression .)
+    BAND            reduce using rule 9 (expression -> expression EQ expression .)
+    EQ              reduce using rule 9 (expression -> expression EQ expression .)
+    NE              reduce using rule 9 (expression -> expression EQ expression .)
+    $end            reduce using rule 9 (expression -> expression EQ expression .)
+    RPAREN          reduce using rule 9 (expression -> expression EQ expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! DIV             [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! ADD             [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! SUB             [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! LT              [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! GT              [ reduce using rule 9 (expression -> expression EQ expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+
+
+state 39
+
+    (10) expression -> expression NE expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 10 (expression -> expression NE expression .)
+    AND             reduce using rule 10 (expression -> expression NE expression .)
+    BOR             reduce using rule 10 (expression -> expression NE expression .)
+    BAND            reduce using rule 10 (expression -> expression NE expression .)
+    EQ              reduce using rule 10 (expression -> expression NE expression .)
+    NE              reduce using rule 10 (expression -> expression NE expression .)
+    $end            reduce using rule 10 (expression -> expression NE expression .)
+    RPAREN          reduce using rule 10 (expression -> expression NE expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+    LT              shift and go to state 25
+    GT              shift and go to state 26
+
+  ! MUL             [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! DIV             [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! ADD             [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! SUB             [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! LT              [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! GT              [ reduce using rule 10 (expression -> expression NE expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+
+
+state 40
+
+    (11) expression -> expression LT expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 11 (expression -> expression LT expression .)
+    AND             reduce using rule 11 (expression -> expression LT expression .)
+    BOR             reduce using rule 11 (expression -> expression LT expression .)
+    BAND            reduce using rule 11 (expression -> expression LT expression .)
+    EQ              reduce using rule 11 (expression -> expression LT expression .)
+    NE              reduce using rule 11 (expression -> expression LT expression .)
+    LT              reduce using rule 11 (expression -> expression LT expression .)
+    GT              reduce using rule 11 (expression -> expression LT expression .)
+    $end            reduce using rule 11 (expression -> expression LT expression .)
+    RPAREN          reduce using rule 11 (expression -> expression LT expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+
+  ! MUL             [ reduce using rule 11 (expression -> expression LT expression .) ]
+  ! DIV             [ reduce using rule 11 (expression -> expression LT expression .) ]
+  ! ADD             [ reduce using rule 11 (expression -> expression LT expression .) ]
+  ! SUB             [ reduce using rule 11 (expression -> expression LT expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 41
+
+    (12) expression -> expression GT expression .
+    (1) expression -> expression . MUL expression
+    (2) expression -> expression . DIV expression
+    (3) expression -> expression . ADD expression
+    (4) expression -> expression . SUB expression
+    (5) expression -> expression . OR expression
+    (6) expression -> expression . AND expression
+    (7) expression -> expression . BOR expression
+    (8) expression -> expression . BAND expression
+    (9) expression -> expression . EQ expression
+    (10) expression -> expression . NE expression
+    (11) expression -> expression . LT expression
+    (12) expression -> expression . GT expression
+
+    OR              reduce using rule 12 (expression -> expression GT expression .)
+    AND             reduce using rule 12 (expression -> expression GT expression .)
+    BOR             reduce using rule 12 (expression -> expression GT expression .)
+    BAND            reduce using rule 12 (expression -> expression GT expression .)
+    EQ              reduce using rule 12 (expression -> expression GT expression .)
+    NE              reduce using rule 12 (expression -> expression GT expression .)
+    LT              reduce using rule 12 (expression -> expression GT expression .)
+    GT              reduce using rule 12 (expression -> expression GT expression .)
+    $end            reduce using rule 12 (expression -> expression GT expression .)
+    RPAREN          reduce using rule 12 (expression -> expression GT expression .)
+    MUL             shift and go to state 15
+    DIV             shift and go to state 16
+    ADD             shift and go to state 17
+    SUB             shift and go to state 18
+
+  ! MUL             [ reduce using rule 12 (expression -> expression GT expression .) ]
+  ! DIV             [ reduce using rule 12 (expression -> expression GT expression .) ]
+  ! ADD             [ reduce using rule 12 (expression -> expression GT expression .) ]
+  ! SUB             [ reduce using rule 12 (expression -> expression GT expression .) ]
+  ! OR              [ shift and go to state 19 ]
+  ! AND             [ shift and go to state 20 ]
+  ! BOR             [ shift and go to state 21 ]
+  ! BAND            [ shift and go to state 22 ]
+  ! EQ              [ shift and go to state 23 ]
+  ! NE              [ shift and go to state 24 ]
+  ! LT              [ shift and go to state 25 ]
+  ! GT              [ shift and go to state 26 ]
+
+
+state 42
+
+    (15) expression -> LPAREN expression RPAREN .
+
+    MUL             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    DIV             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    ADD             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    SUB             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    OR              reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    AND             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    BOR             reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    BAND            reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    EQ              reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    NE              reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    LT              reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    GT              reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    $end            reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+    RPAREN          reduce using rule 15 (expression -> LPAREN expression RPAREN .)
+
